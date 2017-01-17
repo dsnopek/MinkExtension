@@ -105,6 +105,7 @@ class SessionsListener implements EventSubscriberInterface
                 $this->mink->resetSessions();
             }
             catch (\Exception $e) {
+                print "\n\nRESETTING FAILED! STOPPING SESSIONS INSTEAD.\n\n";
                 $this->mink->stopSessions();
             }
         }
